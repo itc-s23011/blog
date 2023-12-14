@@ -1,20 +1,16 @@
 import Header from 'components/header'
-import Hero from 'components/hero'
 import Footer from 'components/footer'
 
-const Home = () => {
+export default function Layout ({ children }) {
   return (
     <>
-      <header>HEDER</header>
-      <main>
-        <div>
-          <h1>CUBE</h1>
-          <p>アウトプットしていくサイト</p>
-        </div>
-      </main>
+      <Layout>
+        <Header />
+      </Layout>
 
-      <footer>FOOTER</footer>
+      <main>{children}</main>
+
+      <Footer />
     </>
   )
 }
-export default Home
